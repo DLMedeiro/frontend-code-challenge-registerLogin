@@ -7,10 +7,18 @@ a:hover {
 }
 .card{
   margin: auto;
+  margin-bottom: 25px;
 }
 .card-body{
   margin: auto;
+  /* margin-right: 50px; */
 }
+.card-title, .card-subtitle{
+  text-align: left;
+  padding: 0px 50px 0px 50px;
+
+}
+
 .button-main{
   text-decoration: none;
   color:black;
@@ -38,6 +46,7 @@ a:hover {
    border: 2px solid transparent;
    transition: .5s;
 }
+
 
 .App {
   text-align: center;

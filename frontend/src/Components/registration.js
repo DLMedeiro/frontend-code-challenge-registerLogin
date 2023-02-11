@@ -41,7 +41,7 @@ function Registration() {
     <section>
       <Card>
         <h1>Yodlr Registration Portal</h1>
-        <CardBody className="text-center">
+        <CardBody className="text-center card-body-form">
           {formComplete ? (
             <h3>Congratulations {userName}, your registration is complete</h3>
           ) : (

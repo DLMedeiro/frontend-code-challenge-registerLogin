@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RegisterLoginApi from "../api";
 import { Link } from "react-router-dom";
-import { Card, CardBody } from "reactstrap";
+import { Card, CardBody, CardSubtitle, CardTitle } from "reactstrap";
 
 function Admin() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,13 +29,18 @@ function Admin() {
         <h1>Administration Page</h1>
         <CardBody className="text-center">
           <h3>User Data</h3>
-          <ul>
+          <Card>
             {allUsers.map((user) => (
-              <li key={user.id}>
-                {user.firstName} {user.lastName} : {user.email}
-              </li>
+              <CardBody key={user.id}>
+                <CardTitle tag="h5" className="font-weight-bold">
+                  {user.firstName} {user.lastName}
+                </CardTitle>
+                <CardSubtitle className="mb-2 text-muted" tag="h6">
+                  {user.email}
+                </CardSubtitle>
+              </CardBody>
             ))}
-          </ul>
+          </Card>
           <Link id="btn" role="button" className="button-main" to="/">
             Home Page
           </Link>

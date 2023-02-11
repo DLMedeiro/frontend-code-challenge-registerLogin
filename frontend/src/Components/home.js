@@ -7,7 +7,7 @@ function Home() {
     <section>
       <Card>
         <h1>Yodlr Design Challenge</h1>
-        <CardBody className="text-center">
+        <CardBody className="text-center card-body-form">
           <div className="button-submit">
             <Link id="btn" role="button" to="/admin">
               Admin Page
