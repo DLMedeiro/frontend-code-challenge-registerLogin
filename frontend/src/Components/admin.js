@@ -23,8 +23,6 @@ function Admin() {
     return <p>Loading &hellip;</p>;
   }
 
-  console.log(allUsers);
-
   return (
     <section>
       <Card>

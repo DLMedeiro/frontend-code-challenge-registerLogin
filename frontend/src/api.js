@@ -18,7 +18,6 @@ class RegisterLoginApi {
   }
 
   static async addUser(userData) {
-    console.log(userData);
     try {
       let newUser = await axios.post(`${BASE_API_URL}/users`, userData);
       return newUser;
