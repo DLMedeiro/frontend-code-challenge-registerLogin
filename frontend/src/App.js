@@ -36,9 +36,13 @@ function App() {
 
   return (
     <div className="App">
-      {allUsers.map((item) => (
-        <div>{item}</div>
-      ))}
+      <ul>
+        {allUsers.data.map((user) => (
+          <li>
+            {user.firstName} {user.lastName} : {user.email}
+          </li>
+        ))}
+      </ul>
     </div>
   );
   // return (
