@@ -23,6 +23,8 @@ function Admin() {
     return <p>Loading &hellip;</p>;
   }
 
+  console.log(allUsers);
+
   return (
     <section>
       <Card>
@@ -30,7 +32,7 @@ function Admin() {
         <CardBody className="text-center">
           <h3>User Data</h3>
           <ul>
-            {allUsers.data.map((user) => (
+            {allUsers.map((user) => (
               <li key={user.id}>
                 {user.firstName} {user.lastName} : {user.email}
               </li>

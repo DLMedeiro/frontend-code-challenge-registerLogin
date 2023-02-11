@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RegisterLoginApi from "../api";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -13,6 +14,8 @@ import {
 function Registration() {
   const INITIAL_STATE = {
     email: "",
+    firstName: "",
+    lastName: "",
   };
   const [formData, setFormData] = useState(INITIAL_STATE);
 
@@ -24,8 +27,14 @@ function Registration() {
     }));
   };
 
+  const add = async (userData) => {
+    await RegisterLoginApi.addUser(userData);
+    // setIsLoading(false);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    add(formData);
     // setLoading(true);
     setFormData(INITIAL_STATE);
   };
@@ -51,6 +60,28 @@ function Registration() {
                 id="email"
                 onChange={handleChange}
                 value={formData.email}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="firstName">First Name:</Label>
+              <Input
+                className="form-control"
+                type="text"
+                name="firstName"
+                id="firstName"
+                onChange={handleChange}
+                value={formData.firstName}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="lastName">Last Name:</Label>
+              <Input
+                className="form-control"
+                type="text"
+                name="lastName"
+                id="lastName"
+                onChange={handleChange}
+                value={formData.lastName}
               />
             </FormGroup>
 
