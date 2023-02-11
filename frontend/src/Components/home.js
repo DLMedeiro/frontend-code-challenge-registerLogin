@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { Card, CardBody } from "reactstrap";
 
 function Home() {
   return (
-    <div className="App">
-      <h1>Yodlr Design Challenge</h1>
-      <Link
-        id="btn-main"
-        role="button"
-        className="btn btn-lg btn-block"
-        to="/admin"
-      >
-        Admin Page
-      </Link>
-      <br></br>
-      <Link
-        id="btn-main"
-        role="button"
-        className="btn btn-lg btn-block"
-        to="/registration"
-      >
-        Registration Page
-      </Link>
-    </div>
+    <section>
+      <Card>
+        <h1>Yodlr Design Challenge</h1>
+        <CardBody className="text-center">
+          <div className="button-submit">
+            <Link id="btn" role="button" to="/admin">
+              Admin Page
+            </Link>
+          </div>
+          <div className="button-submit">
+            <Link id="btn" role="button" to="/registration">
+              Registration Page
+            </Link>
+          </div>
+        </CardBody>
+      </Card>
+    </section>
   );
 }
 

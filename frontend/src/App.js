@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Components/home";
 import Admin from "./Components/admin";
 import Registration from "./Components/registration";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 // import NavBar from "./Components/Navbar";
 
 function App() {

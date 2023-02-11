@@ -1,5 +1,47 @@
+a {
+  text-decoration: none;
+  color:black
+}
+a:hover {
+  color:black
+}
+.card{
+  margin: auto;
+}
+.card-body{
+  margin: auto;
+}
+.button-main{
+  text-decoration: none;
+  color:black;
+  border-bottom: 2px solid transparent;
+}
+.button-main:hover{
+  font: bold;
+  color: purple;
+  border-bottom: 2px solid purple;
+  transition: .5s;
+}
+.button-submit{
+  margin: auto;
+  text-decoration: none;
+  color:black;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 10px 50px 10px 50px;
+  margin-bottom: 25px;;
+}
+.button-submit:hover{
+  color:black;
+  font: bold;
+  background-color: rgba(128, 0, 128, 0.5);
+   border: 2px solid transparent;
+   transition: .5s;
+}
+
 .App {
   text-align: center;
+  margin: auto;
 }
 
 .App-logo {

@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RegisterLoginApi from "../api";
 import { Link } from "react-router-dom";
-import {
-  Card,
-  CardBody,
-  Label,
-  Input,
-  Button,
-  FormGroup,
-  Form,
-} from "reactstrap";
+import { Card, CardBody, Label, Input, FormGroup, Form } from "reactstrap";
 
 function Registration() {
   const INITIAL_STATE = {
@@ -18,6 +10,12 @@ function Registration() {
     lastName: "",
   };
   const [formData, setFormData] = useState(INITIAL_STATE);
+  const [userName, setUserName] = useState("");
+  const [formComplete, setFormComplete] = useState(false);
+
+  useEffect(() => {
+    setFormComplete(false);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +33,8 @@ function Registration() {
   const handleSubmit = (e) => {
     e.preventDefault();
     add(formData);
-    // setLoading(true);
+    setUserName(formData.firstName);
+    setFormComplete(true);
     setFormData(INITIAL_STATE);
   };
   return (
@@ -43,62 +42,55 @@ function Registration() {
       <Card>
         <h1>Yodlr Registration Portal</h1>
         <CardBody className="text-center">
-          {/* {loading ? (
-            <View style={[styles.container, styles.horizontal]}>
-              <ActivityIndicator size="large" color="#c19595" />
-            </View>
+          {formComplete ? (
+            <h3>Congratulations {userName}, your registration is complete</h3>
           ) : (
-            ""
-          )} */}
-          <Form onSubmit={handleSubmit}>
-            <FormGroup>
-              <Label htmlFor="email">Email:</Label>
-              <Input
-                className="form-control"
-                type="text"
-                name="email"
-                id="email"
-                onChange={handleChange}
-                value={formData.email}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label htmlFor="firstName">First Name:</Label>
-              <Input
-                className="form-control"
-                type="text"
-                name="firstName"
-                id="firstName"
-                onChange={handleChange}
-                value={formData.firstName}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label htmlFor="lastName">Last Name:</Label>
-              <Input
-                className="form-control"
-                type="text"
-                name="lastName"
-                id="lastName"
-                onChange={handleChange}
-                value={formData.lastName}
-              />
-            </FormGroup>
+            <div>
+              <Form onSubmit={handleSubmit}>
+                <FormGroup>
+                  <Label htmlFor="email">Email:</Label>
+                  <Input
+                    className="form-control"
+                    type="text"
+                    name="email"
+                    id="email"
+                    onChange={handleChange}
+                    value={formData.email}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label htmlFor="firstName">First Name:</Label>
+                  <Input
+                    className="form-control"
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    onChange={handleChange}
+                    value={formData.firstName}
+                    required
+                  />
+                </FormGroup>
+                <FormGroup>
+                  <Label htmlFor="lastName">Last Name:</Label>
+                  <Input
+                    className="form-control"
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    onChange={handleChange}
+                    value={formData.lastName}
+                    required
+                  />
+                </FormGroup>
 
-            <Button
-              id="btn-login"
-              className="btn btn-lg btn-block"
-              type="submit"
-            >
-              Submit Email
-            </Button>
-          </Form>
-          <Link
-            id="btn-main"
-            role="button"
-            className="btn btn-lg btn-block"
-            to="/"
-          >
+                <button id="btn" className="button-submit" type="submit">
+                  Submit Email
+                </button>
+              </Form>
+            </div>
+          )}
+          <Link id="btn" role="button" className="button-main" to="/">
             Home Page
           </Link>
         </CardBody>

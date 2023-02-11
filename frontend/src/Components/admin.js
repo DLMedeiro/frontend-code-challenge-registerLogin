@@ -36,12 +36,7 @@ function Admin() {
               </li>
             ))}
           </ul>
-          <Link
-            id="btn-main"
-            role="button"
-            className="btn btn-lg btn-block"
-            to="/"
-          >
+          <Link id="btn" role="button" className="button-main" to="/">
             Home Page
           </Link>
         </CardBody>
