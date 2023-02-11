@@ -22,7 +22,7 @@ function Admin() {
   }
 
   return (
-    <div className="App">
+    <div>
       <ul>
         {allUsers.data.map((user) => (
           <li key={user.id}>

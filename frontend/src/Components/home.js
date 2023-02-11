@@ -13,6 +13,14 @@ function Home() {
       >
         Admin Page
       </Link>
+      <Link
+        id="btn-main"
+        role="button"
+        className="btn btn-lg btn-block"
+        to="/registration"
+      >
+        Registration Page
+      </Link>
     </div>
   );
 }
