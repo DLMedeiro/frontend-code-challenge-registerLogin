@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardBody,
@@ -61,6 +62,14 @@ function Registration() {
               Submit Email
             </Button>
           </Form>
+          <Link
+            id="btn-main"
+            role="button"
+            className="btn btn-lg btn-block"
+            to="/"
+          >
+            Home Page
+          </Link>
         </CardBody>
       </Card>
     </section>

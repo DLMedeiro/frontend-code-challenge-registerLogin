@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="App">
-      <h1>Home Page</h1>
+      <h1>Yodlr Design Challenge</h1>
       <Link
         id="btn-main"
         role="button"
@@ -13,6 +13,7 @@ function Home() {
       >
         Admin Page
       </Link>
+      <br></br>
       <Link
         id="btn-main"
         role="button"
