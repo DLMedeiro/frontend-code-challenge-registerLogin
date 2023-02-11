@@ -1,15 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { BrowserRouter } from "react-router-dom";
-import "./App.css";
-// import Admin from "./admin";
-import RegisterLoginApi from "./api";
-// import NavBar from "./NavBar";
-// import { Route, Switch } from "react-router-dom";
-// import Menu from "./Menu";
-// import MenuItem from "./MenuItem";
-// import NewItem from "./NewItem";
-
-// No updates required if changes are made to database structure
+import RegisterLoginApi from "../api";
 
 function Admin() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,9 +7,6 @@ function Admin() {
 
   const [allUsers, setAllUsers] = useState([]);
   // Holds content received from API
-
-  const [update, setUpdate] = useState();
-  // Used to initiate new API call if a new item is added
 
   useEffect(() => {
     async function getUsers() {
@@ -38,7 +25,7 @@ function Admin() {
     <div className="App">
       <ul>
         {allUsers.data.map((user) => (
-          <li>
+          <li key={user.id}>
             {user.firstName} {user.lastName} : {user.email}
           </li>
         ))}
