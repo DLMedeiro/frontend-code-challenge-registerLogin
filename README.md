@@ -17,6 +17,7 @@ Minimum Requirements:
 * Design/layout of content
 
 __Features Completed and In Process after 8 Hours of work:__
+* Deployed with Render.com [register-login-fronted](https://register-login-frontend-fygs.onrender.com)
 * Updated file structure to include a React frontend, and created an API Endpoint to communicate with JSON REST API
 * Landing page: Users can navigate to the Admin or Registration pages
 * Registration form:
@@ -26,6 +27,7 @@ __Features Completed and In Process after 8 Hours of work:__
 * Administration page: Lists all users, including their full name and e-mail 
 * Page navigation: Users can move throughout the site without requiring the back button
 * Snapshot testing completed for the Home page component
+* 
 * Styling completed with Bootstrap and additional CSS
 * _(In Process)_ Snapshot testing in process for the Registration and Admin pages (working through import error)
 
