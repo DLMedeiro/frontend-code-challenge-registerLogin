@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_API_URL = "http://localhost:3000";
+const BASE_API_URL =
+  "https://register-login-backend.onrender.com" || "http://localhost:3000";
 
 class RegisterLoginApi {
   static async getAllUsers() {
