@@ -18,4 +18,11 @@ describe("POST /", function () {
       state: "pending",
     });
   });
+
+  test("bad request if missing data", async function () {
+    const resp = await request(app).post("/users").send({
+      username: "u-new",
+    });
+    expect(resp.statusCode).toEqual(500);
+  });
 });
