@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="card"
+    >
+      <h1>
+        Yodlr Design Challenge
+      </h1>
+      <div
+        class="text-center card-body-form card-body"
+      >
+        <div
+          class="button-submit"
+        >
+          <a
+            href="/admin"
+            id="btn"
+            role="button"
+          >
+            Admin Page
+          </a>
+        </div>
+        <div
+          class="button-submit"
+        >
+          <a
+            href="/registration"
+            id="btn"
+            role="button"
+          >
+            Registration Page
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
