@@ -17,6 +17,8 @@ describe("POST /", function () {
       id: expect.any(Number),
       state: "pending",
     });
+    const resp2 = await request(app).delete("/users/5");
+    expect(resp2.statusCode).toEqual(204);
   });
 
   test("bad request if missing data", async function () {

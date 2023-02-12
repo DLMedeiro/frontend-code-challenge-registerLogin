@@ -8,16 +8,18 @@ function Home() {
       <Card>
         <h1>Yodlr Design Challenge</h1>
         <CardBody className="text-center card-body-form">
-          <div className="button-submit">
-            <Link id="btn" role="button" to="/admin">
-              Admin Page
-            </Link>
-          </div>
-          <div className="button-submit">
-            <Link id="btn" role="button" to="/registration">
-              Registration Page
-            </Link>
-          </div>
+          <Link id="btn" className="button-submit" role="button" to="/admin">
+            Admin Page
+          </Link>
+
+          <Link
+            id="btn"
+            className="button-submit"
+            role="button"
+            to="/registration"
+          >
+            Registration Page
+          </Link>
         </CardBody>
       </Card>
     </section>

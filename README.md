@@ -1,8 +1,6 @@
 # Yodlr Front End Engineer Code/Design Challenge
 *Full readme located in backend folder*
 
-=======================
-
 ## Overview
 
 __Provided:__ A simple [NodeJS](https://nodejs.org)
