@@ -24,6 +24,7 @@ router.post("/", function (req, res) {
   log.info("Created user", user);
   log.info("body", { email, firstName, lastName });
   res.json(user);
+  return res.status(200).json(user);
 });
 
 /* Get a specific user by id */
